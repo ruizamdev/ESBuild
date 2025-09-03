@@ -1,0 +1,38 @@
+{
+  "name": "esbuild",
+  "version": "1.0.0",
+  "description": "Proyecto con ESBuild",
+  "keywords": [
+    "ESBuild",
+    "javascript"
+  ],
+  "homepage": "https://github.com/ruizamdev/ESBuild#readme",
+  "bugs": {
+    "url": "https://github.com/ruizamdev/ESBuild/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruizamdev/ESBuild.git"
+  },
+  "license": "MIT",
+  "author": "Armando Ruiz <artmx@proton.me>",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=public/bundle.js",
+    "build:dev": "node esbuild.dev.js",
+    "start": "node esbuild.dev.js -w",
+    "open": "open public/index.html"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9",
+    "esbuild-server": "^0.3.0"
+  },
+  "dependencies": {
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2"
+  }
+}
